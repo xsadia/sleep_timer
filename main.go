@@ -18,7 +18,7 @@ func main() {
 		log.Fatal("Not enough arguments")
 	}
 
-	pid, err := exec.Command("pgrep", "firefox").Output()
+	pid, err := getPid("firefox")
 
 	if err != nil {
 		log.Fatal("Something went wrong")
@@ -39,6 +39,16 @@ func main() {
 	}
 
 	os.Exit(0)
+}
+
+func getPid(process string) ([]byte, error) {
+	pid, err := exec.Command("pgrep", process).Output()
+
+	if err != nil {
+		return []byte{}, err
+	}
+
+	return pid, nil
 }
 
 func kill(pid []byte) error {

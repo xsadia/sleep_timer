@@ -1,1 +1,1 @@
-### I tend to fall asleep while watching youtube videos, but it has made my sleep quality worse. So I made this dumb program to kill firefox's process and suspend the system
+#### I tend to fall asleep while watching youtube videos, but it has made my sleep quality worse. So I made this dumb program to kill firefox's process and suspend the system
